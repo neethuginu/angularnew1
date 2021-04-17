@@ -1,0 +1,26 @@
+   
+     
+    <form  [formGroup]="registerForm" (ngSubmit)="register()">  
+        <h1>SBM bank register</h1>
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" formControlName="uname" placeholder="Enter Username" name="username" required>  
+           <div *ngIf="this.registerForm.get('uname')?.touched !! && this.registerForm.get('uname')?.errors" class="error">Invalid username</div>
+            <label>Password : </label>   
+            <input type="password" formControlName="pswd" placeholder="Enter Password" name="password" required>  
+            <div *ngIf="this.registerForm.get('pswd')?.errors" class="error">Invalidpswd</div>
+
+            <label>Acno : </label>   
+            <input type="text"  formControlName="acno" placeholder="Enter Acname" name="acname" required>  
+            <div *ngIf="this.registerForm.get('acno')?.errors" class="error">Invalidaccno</div>
+
+            <label>Mobile: </label>   
+            <input type="text" formControlName="mobile" placeholder="Enter mobile" name="mobile" required>  
+            
+            <button type="submit" >Register</button> 
+            <a routerLink="">Login</a>
+             
+        </div>   
+    </form>     
+
+

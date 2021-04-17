@@ -1,0 +1,59 @@
+<div>
+    <h1>Welcome {{name}} to SBM BANK</h1>
+</div>
+<form [formGroup]="depositForm" (ngSubmit)="deposit()">
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2> customer Deposit page</h2>
+                </div>
+                <div class="col-2"></div>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Acno</label>
+                <input type="text"  formControlName="accno" name="accno" class="form-control" id="uname" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" formControlName="pswd" name="pswd" class="form-control" id="pwd">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Amount</label>
+                <input type="text" formControlName="amount" name="amount" class="form-control" id="amt">
+            </div>
+            <button type="submit" class="btn btn-primary" >Deposit</button>
+        </div>
+    </div>
+</form>
+<form [formGroup]="withdrwalForm" (ngSubmit)="withdrwal()">
+    <div class="container">
+
+        <div class="main">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2> customer withdrwal page</h2>
+                </div>
+                <div class="col-2"></div>
+            </div> 
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Acno</label>
+                <input type="text"  formControlName="accno" name="accno" class="form-control" id="uname" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" formControlName="pswd" name="pswd" class="form-control" id="pwd">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Amount</label>
+                <input type="text" formControlName="amount" name="amount" class="form-control" id="amt">
+            </div>
+            <button type="submit" class="btn btn-primary" >WithDraw</button>
+        </div>
+
+    </div>
+</form>
